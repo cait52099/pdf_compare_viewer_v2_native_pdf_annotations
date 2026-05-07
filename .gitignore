@@ -1,0 +1,34 @@
+# Build outputs
+dist/
+*.build/
+*.onefile-build/
+*.dist-info/
+
+# Virtual environments
+.venv/
+.venv_nuitka/
+venv/
+
+# Nuitka compilation artifacts
+*.py.nuitka
+*.pyc
+__pycache__/
+
+# Reports
+compilation_report.html
+
+# Backup files
+backup/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+*.egg-info/

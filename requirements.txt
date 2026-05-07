@@ -1,0 +1,5 @@
+# Minimal dependencies for PDF Compare Viewer V2
+# These are the only required runtime dependencies
+
+PySide6>=6.6
+PyMuPDF>=1.24
