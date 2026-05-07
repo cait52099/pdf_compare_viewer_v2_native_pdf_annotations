@@ -1,9 +1,5 @@
 # PDF Compare Viewer V2.1.0 for Windows
 
-## Current Folder
-
-`C:\Users\hcai\Downloads\pdf_compare_viewer_v2_native_pdf_annotations_20260412_hand_pan_zoom\pdf_compare_viewer_v2_native_pdf_annotations`
-
 ## Recommended Environment
 
 - Windows 10 or Windows 11
@@ -12,34 +8,49 @@
 ## Setup
 
 ```bat
-py -3.11 -m venv .venv
-.venv\Scripts\python -m pip install --upgrade pip
-.venv\Scripts\python -m pip install -r starter\requirements.txt
-```
-
-## Start
-
-```bat
 py -3.11 starter\main.py
 ```
 
-Or:
+Or with virtual environment:
 
 ```bat
 .venv\Scripts\python starter\main.py
 ```
 
-## Included in V2.1.0
+## Build EXE
 
-- Hand-pan mode with footer `✋` toggle and mouse middle-button toggle
-- `Ctrl + mouse wheel` fine zoom
-- `↶` / `↷` rotation buttons
-- Per-screen auto layout for multi-monitor setups
-- Relative zoom behavior preserved per window in Sync mode
-- High-DPI rendering path support
+Using PowerShell:
 
-## Notes
+```powershell
+.uild_nuitka.ps1
+```
 
-- Source build, not a guaranteed final packaged release
-- Adobe-compatible annotation write-back is preserved for `Square` and `Ink`
-- If high-DPI behavior needs rollback, use environment variable `PDF_COMPARE_DISABLE_HIGH_DPI=1`
+Or using Batch:
+
+```batch
+build_nuitka.bat
+```
+
+The built executable will be in `dist/PDF_Compare_Viewer_V2/`.
+
+## Running the Built EXE
+
+Navigate to the dist folder and run:
+
+```batch
+dist\PDF_Compare_Viewer_V2\PDF_Compare_Viewer_V2.exe
+```
+
+## Dependencies
+
+- Python 3.11+
+- PyMuPDF (fitz)
+- Nuitka (for building EXE)
+
+## Features
+
+- Side-by-side PDF comparison
+- Sync / Solo mode
+- Native PDF annotation support (Adobe-compatible)
+- Hand-pan and zoom controls
+- Multi-screen aware layout
